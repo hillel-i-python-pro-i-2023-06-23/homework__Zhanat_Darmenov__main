@@ -19,13 +19,13 @@ def check_get_players(name1, name2):
     print('name of player 1', name1)
     print('name of player 2', name2)
 
-if __name__=="__main__":
-    name1 = ''
-    name2 = ''
-    wordlist1 = []
-    wordlist2 = []
-    game_on = True
-    check_get_players(name1, name2)
-    input_word(name1, wordlist1, game_on)
-    input_word(name2, wordlist2, game_on)
+#if __name__=="__main__":
+#    name1 = ''
+#    name2 = ''
+#    wordlist1 = []
+#    wordlist2 = []
+#    game_on = True
+#    check_get_players(name1, name2)
+#    input_word(name1, wordlist1, game_on)
+#    input_word(name2, wordlist2, game_on)
 
