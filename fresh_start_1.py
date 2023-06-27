@@ -1,9 +1,12 @@
-def get_players(name1, name2):
+def get_players():
+    namelist=[]
     name1=input("Player 1, enter your name: ")
     print("Hi ", name1)
+    namelist.append(name1)
     name2=input("Player 2, enter your name: ")
     print("Hi ", name2)
-
+    namelist.append(name2)
+    return namelist
 
 def input_word(name_player, word_list, game_on):
     word = input('Your turn, player '+name_player+' enter your word:')
@@ -14,18 +17,18 @@ def input_word(name_player, word_list, game_on):
         word_list.append(word)
 
 
-def check_get_players(name1, name2):
-    get_players(name1, name2)
-    print('name of player 1', name1)
-    print('name of player 2', name2)
+def check_get_players():
+    namelist = get_players()
+    print('name of player 1', namelist[0])
+    print('name of player 2', namelist[1])
 
-#if __name__=="__main__":
-#    name1 = ''
-#    name2 = ''
-#    wordlist1 = []
-#    wordlist2 = []
-#    game_on = True
-#    check_get_players(name1, name2)
-#    input_word(name1, wordlist1, game_on)
-#    input_word(name2, wordlist2, game_on)
+if __name__=="__main__":
+    wordlist1 = []
+    wordlist2 = []
+    game_on = True
+    namelist = []
+    namelist = check_get_players()
+
+    #input_word(namelist[0], wordlist1, game_on)
+    #input_word(namelist[1], wordlist2, game_on)
 
