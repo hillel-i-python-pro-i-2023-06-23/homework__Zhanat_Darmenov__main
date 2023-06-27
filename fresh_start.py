@@ -6,9 +6,8 @@ def game_cycle():
     player1 = True
 
     # Get player Names:
-    name1 = ''
-    name2 = ''
-    get_players(name1, name2)
+    namelist = []
+    namelist = get_players()
 
     wordlist1 = []
     wordlist2 = []
@@ -17,12 +16,18 @@ def game_cycle():
         # Add Player word to List:
         if player1:
             # Add first player word to List
-            input_word(name1, wordlist1, game_on)
+            game_on = input_word(namelist[0], wordlist1)
             player1 = False
+            if game_on == False:
+                print('Your looser ',namelist[0])
+                print('Your WIN', namelist[1])
         else:
             # Add second player word to List
-            input_word(name2, wordlist2, game_on)
+            game_on = input_word(namelist[1], wordlist2)
             player1 = True
+            if game_on == False:
+                print('Your looser ',namelist[1])
+                print('Your WIN', namelist[0])
 
 
 

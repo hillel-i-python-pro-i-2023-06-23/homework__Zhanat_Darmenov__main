@@ -8,13 +8,13 @@ def get_players():
     namelist.append(name2)
     return namelist
 
-def input_word(name_player, word_list, game_on):
+def input_word(name_player, word_list):
     word = input('Your turn, player '+name_player+' enter your word:')
     if word=='':
-        game_on = False
-        return
+        return False
     if not word in word_list:
         word_list.append(word)
+    return True
 
 
 def check_get_players():
