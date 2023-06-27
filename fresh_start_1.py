@@ -11,9 +11,13 @@ def get_players():
 def input_word(name_player, word_list):
     word = input('Your turn, player '+name_player+' enter your word:')
     if word=='':
+        print('Finish game!')
         return False
     if not word in word_list:
         word_list.append(word)
+    else:
+        print('This word has been used!')
+
     return True
 
 
