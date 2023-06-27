@@ -10,6 +10,7 @@ def input_word(name_player, word_list):
         word_list.append(word)
 
 
+
 def check_get_players(name1, name2):
 
     get_players(name1, name2)
